@@ -1,0 +1,5 @@
+[/] Python version checked (>=3.10 recommended)
+[/] Virtual environment (venv) created and activated
+[/] Django installed and version verified
+[/] Django runserver working (localhost accessible)
+[/] Git remote repository set up and linked
