@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <p><strong>Author:</strong> {{ book.author.name }}</p>
+    <p><strong>Published:</strong> {{ book.published }}</p>
+    <p><strong>Categories:</strong>
+        {% for cat in book.categories.all %}
+            {{ cat.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+
+    <p><a href="{% url 'book_list' %}">⬅ Back to All Books</a></p>
+</body>
+</html>

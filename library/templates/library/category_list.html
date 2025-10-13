@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+    <h1>All Categories</h1>
+    <ul>
+        {% for cat in categories %}
+            <li>{{ cat.name }}</li>
+        {% empty %}
+            <li>No categories available.</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{% url 'library' %}">⬅ Back to Home</a></p>
+</body>
+</html>
